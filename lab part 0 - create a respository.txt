@@ -1,5 +1,0 @@
-lab part 1 - create a respository
-1. what message apears after running git init?
-/Users/kille/OneDrive/Desktop/Lab0 javascript/.git/
-
-2. what hidden folder was created?

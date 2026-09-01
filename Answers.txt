@@ -10,3 +10,15 @@ lab part 1 - create a respository
 its saved in your local folder just not in the repoed .
 
 Lab Part 4 – Stage Changes
+  1. why do you think git requires a staging area
+   the stage is used to seleced the files to be added in oder to be saved
+
+Lab Part 5 – Commit Changes
+  1. What is the commit message?
+  is a stamp of the project 
+  2. What is display after running git log?
+  tells you who did what and what time they did it
+
+Lab Part 8 – Make Another Change
+  1. Do you see the changes in the remote repository?
+  not everything is in my repository but i can see everything in Vscode
