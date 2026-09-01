@@ -1,0 +1,12 @@
+lab part 1 - create a respository
+  1. what message apears after running git init?
+   /Users/kille/OneDrive/Desktop/Lab0 javascript/.git/
+  2. what hidden folder was created?
+
+3. Lab part 3 - check repository status 
+   1. What color is the filename?
+      Red.
+   2. What does "Untracked" mean
+its saved in your local folder just not in the repoed .
+
+Lab Part 4 – Stage Changes
