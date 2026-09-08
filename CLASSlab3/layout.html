@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOVA — Build Beyond Limits</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+    :root {
+      --bg: #07070a;
+      --card: rgba(255,255,255,.055);
+      --border: rgba(255,255,255,.11);
+      --text: #f7f7f8;
+      --muted: #9999a8;
+      --purple: #9b5cff;
+      --pink: #ff4ecd;
+      --cyan: #54e8ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 50% -10%, rgba(155,92,255,.22), transparent 34rem),
+        radial-gradient(circle at 90% 45%, rgba(84,232,255,.08), transparent 28rem),
+        var(--bg);
+      font-family: "DM Sans", sans-serif;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .035;
+      background-image:
+        linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.5) 1px, transparent 1px);
+      background-size: 70px 70px;
+      mask-image: linear-gradient(to bottom, black, transparent 80%);
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    /* NAV */
+    nav {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      text-decoration: none;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -.5px;
+    }
+
+    .logo-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, var(--cyan), var(--purple) 55%, var(--pink));
+      box-shadow: 0 0 30px rgba(155,92,255,.4);
+      transform: rotate(10deg);
+    }
+
+    nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    nav a {
+      color: #a7a7b2;
+      text-decoration: none;
+      font-size: 14px;
+      transition: .25s;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    .nav-button {
+      padding: 10px 17px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      color: white;
+      background: rgba(255,255,255,.05);
+      backdrop-filter: blur(10px);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 690px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      padding: 80px 0 120px;
+    }
+
+    .orb {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--purple), var(--pink));
+      filter: blur(110px);
+      opacity: .16;
+      animation: float 7s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-25px) scale(1.05); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      width: fit-content;
+      margin: 0 auto 24px;
+      padding: 7px 12px;
+      border: 1px solid rgba(155,92,255,.3);
+      border-radius: 100px;
+      color: #c9b3ff;
+      background: rgba(155,92,255,.08);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(52px, 8vw, 94px);
+      line-height: .94;
+      letter-spacing: -5px;
+      margin-bottom: 28px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #fff 15%, #b889ff 48%, #ff7be0 80%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 36px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      border: 0;
+      border-radius: 12px;
+      padding: 14px 22px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .primary {
+      background: linear-gradient(135deg, #9b5cff, #e84bce);
+      box-shadow: 0 12px 40px rgba(155,92,255,.25);
+    }
+
+    .primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 50px rgba(155,92,255,.4);
+    }
+
+    .secondary {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+    }
+
+    .secondary:hover {
+      background: rgba(255,255,255,.09);
+    }
+
+    /* PRICING */
+    .pricing {
+      padding: 20px 0 110px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-heading h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(34px, 5vw, 52px);
+      letter-spacing: -2px;
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .card {
+      position: relative;
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: var(--card);
+      backdrop-filter: blur(18px);
+      transition: .35s;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      top: -100px;
+      right: -80px;
+      border-radius: 50%;
+      background: var(--purple);
+      filter: blur(60px);
+      opacity: 0;
+      transition: .35s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255,255,255,.22);
+      background: rgba(255,255,255,.075);
+    }
+
+    .card:hover::before {
+      opacity: .25;
+    }
+
+    .featured {
+      border-color: rgba(171,108,255,.55);
+      background:
+        linear-gradient(180deg, rgba(155,92,255,.12), rgba(255,255,255,.04));
+      transform: translateY(-10px);
+    }
+
+    .featured:hover {
+      transform: translateY(-17px);
+    }
+
+    .badge {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      padding: 6px 9px;
+      border-radius: 100px;
+      background: rgba(155,92,255,.18);
+      border: 1px solid rgba(155,92,255,.35);
+      color: #d7bdff;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .plan {
+      color: #b0b0bb;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .price {
+      margin: 18px 0 10px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -2px;
+    }
+
+    .price span {
+      color: var(--muted);
+      font-family: "DM Sans", sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    .description {
+      min-height: 48px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .card-button {
+      display: block;
+      margin: 25px 0;
+      padding: 13px;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: .25s;
+    }
+
+    .featured .card-button {
+      border: 0;
+      background: linear-gradient(135deg, #9b5cff, #d84ed5);
+    }
+
+    .card-button:hover {
+      background: rgba(255,255,255,.1);
+    }
+
+    .features {
+      display: grid;
+      gap: 14px;
+      list-style: none;
+    }
+
+    .features li {
+      color: #bcbcc6;
+      font-size: 14px;
+    }
+
+    .features li::before {
+      content: "✦";
+      margin-right: 10px;
+      color: #a66bff;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 28px 0 40px;
+      border-top: 1px solid rgba(255,255,255,.07);
+      color: #666673;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 800px) {
+      nav ul {
+        display: none;
+      }
+
+      .hero {
+        min-height: 600px;
+        padding-top: 60px;
+      }
+
+      h1 {
+        letter-spacing: -3px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin: auto;
+      }
+
+      .featured,
+      .featured:hover {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .card {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <nav>
+      <a href="#" class="logo">
+        <span class="logo-mark"></span>
+        NOVA
+      </a>
+
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+
+      <a href="#pricing" class="nav-button">Get Started</a>
+    </nav>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="orb"></div>
+
+      <div class="hero-content">
+        <div class="eyebrow">The next generation starts here</div>
+
+        <h1>
+          Build things<br />
+          <span class="gradient-text">worth remembering.</span>
+        </h1>
+
+        <p>
+          A beautifully simple platform for ambitious teams.
+          Move faster, think bigger, and turn your wildest ideas
+          into something real.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#pricing" class="button primary">Start building →</a>
+          <a href="#features" class="button secondary">Explore NOVA</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <div class="section-heading">
+        <h2>Simple. Powerful. Yours.</h2>
+        <p>Choose the plan that matches your ambition.</p>
+      </div>
+
+      <div class="cards">
+
+        <article class="card">
+          <div class="plan">Starter</div>
+
+          <div class="price">
+            $0 <span>/ forever</span>
+          </div>
+
+          <p class="description">
+            Everything you need to start turning ideas into reality.
+          </p>
+
+          <a href="#" class="card-button">Start for free</a>
+
+          <ul class="features">
+            <li>3 active projects</li>
+            <li>Basic analytics</li>
+            <li>Community support</li>
+            <li>5GB storage</li>
+          </ul>
+        </article>
+
+        <article class="card featured">
+          <div class="badge">Most popular</div>
+
+          <div class="plan">Pro</div>
+
+          <div class="price">
+            $24 <span>/ month</span>
+          </div>
+
+          <p class="description">
+            Serious tools for people who refuse to settle for ordinary.
+          </p>
+
+          <a href="#" class="card-button">Go Pro →</a>
+
+          <ul class="features">
+            <li>Unlimited projects</li>
+            <li>Advanced analytics</li>
+            <li>Priority support</li>
+            <li>100GB storage</li>
+            <li>Custom integrations</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="plan">Scale</div>
+
+          <div class="price">
+            $79 <span>/ month</span>
+          </div>
+
+          <p class="description">
+            Maximum power for teams building what comes next.
+          </p>
+
+          <a href="#" class="card-button">Talk to sales</a>
+
+          <ul class="features">
+            <li>Everything in Pro</li>
+            <li>Unlimited storage</li>
+            <li>Advanced permissions</li>
+            <li>Dedicated support</li>
+            <li>Enterprise security</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 NOVA — Made for the next big thing.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Icons</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <style>
+    .social-icons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .social-icons a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: #111;
+      color: white;
+      text-decoration: none;
+      font-size: 22px;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: translateY(-4px);
+    }
+
+    .social-icons .x:hover {
+      background: #000;
+    }
+
+    .social-icons .tiktok:hover {
+      background: #ff0050;
+    }
+
+    .social-icons .instagram:hover {
+      background: #e1306c;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>About Us</h1>
+  <p>
+    <a href="Class3.Html">Back to home</a>
+  </p>
+  <div class="social-icons">
+    <!-- X -->
+    <a
+      href="https://x.com/yourusername"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="x"
+      aria-label="X"
+    >
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+
+    <!-- TikTok -->
+    <a
+      href="https://www.tiktok.com/@yourusername"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="tiktok"
+      aria-label="TikTok"
+    >
+      <i class="fa-brands fa-tiktok"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a
+      href="https://www.instagram.com/yourusername"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="instagram"
+      aria-label="Instagram"
+    >
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+  </div>
+
+</body>
+</html>
