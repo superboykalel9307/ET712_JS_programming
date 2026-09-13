@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kal-EL's Travel Adventures</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="[cdn.jsdelivr.net](https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css)"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="[cdn.jsdelivr.net](https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css)"
+        rel="stylesheet"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-airplane-fill me-2"></i>
+                Kal-EL's Travel Adventures
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavigation"
+                aria-controls="mainNavigation"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavigation">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a
+                            class="nav-link active"
+                            aria-current="page"
+                            href="index.html"
+                        >
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html">
+                            Destinations
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="plan.html">
+                            Plan a Trip
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Introduction -->
+        <header class="hero-section">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-7">
+                        <span class="hero-label">
+                            <i class="bi bi-compass-fill me-2"></i>
+                            Explore the world
+                        </span>
+
+                        <h1 class="display-3 fw-bold mt-3">
+                            Hello, I'm
+                            <span class="highlight">Kal-EL Rohttis</span>
+                        </h1>
+
+                        <p class="lead mt-4">
+                            I am from Queens, New York. I enjoy discovering
+                            exciting destinations, learning about different
+                            cultures, and creating memorable travel experiences.
+                        </p>
+
+                        <div class="d-flex flex-wrap gap-3 mt-4">
+                            <a
+                                class="btn btn-light btn-lg"
+                                href="destinations.html"
+                            >
+                                View Destinations
+                            </a>
+
+                            <a
+                                class="btn btn-outline-light btn-lg"
+                                href="plan.html"
+                            >
+                                Plan a Trip
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="profile-card text-center">
+                            <div
+                                class="profile-avatar"
+                                role="img"
+                                aria-label="Kal-EL Rohttis profile initials"
+                            >
+                                KR
+                            </div>
+
+                            <h2 class="h3 mt-4">Kal-EL Rohttis</h2>
+
+                            <p class="mb-3">
+                                Student and travel enthusiast
+                            </p>
+
+                            <span class="profile-location">
+                                <i class="bi bi-geo-alt-fill me-2"></i>
+                                Queens, New York
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Personal profile -->
+        <section class="content-section">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <span class="section-label">My Profile</span>
+                    <h2>About My Travel Interests</h2>
+
+                    <p>
+                        My ideal trip combines adventure, photography, local
+                        food, and opportunities to learn about a destination.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <article class="interest-card h-100">
+                            <div class="feature-icon">
+                                <i class="bi bi-map"></i>
+                            </div>
+
+                            <h3 class="h4">Adventure</h3>
+
+                            <p>
+                                I enjoy exploring new places, visiting natural
+                                attractions, and trying exciting activities.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="interest-card h-100">
+                            <div class="feature-icon">
+                                <i class="bi bi-camera"></i>
+                            </div>
+
+                            <h3 class="h4">Photography</h3>
+
+                            <p>
+                                I like taking photographs of landscapes,
+                                buildings, food, and memorable moments.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="interest-card h-100">
+                            <div class="feature-icon">
+                                <i class="bi bi-cup-hot"></i>
+                            </div>
+
+                            <h3 class="h4">Local Culture</h3>
+
+                            <p>
+                                Local traditions, music, history, and food help
+                                make every destination unique.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured destinations -->
+        <section class="content-section light-section">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <span class="section-label">Travel Ideas</span>
+                    <h2>Featured Destinations</h2>
+
+                    <p>
+                        Here are three destinations that I would like to visit.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card destination-card h-100 border-0">
+                            <div class="destination-image japan-image">
+                                <span class="country-badge">Japan</span>
+                                <span aria-hidden="true">⛩️</span>
+                            </div>
+
+                            <div class="card-body p-4">
+                                <h3 class="card-title h4">Kyoto</h3>
+
+                                <p class="card-text">
+                                    Kyoto offers historic temples, beautiful
+                                    gardens, traditional neighborhoods, and
+                                    delicious Japanese food.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card destination-card h-100 border-0">
+                            <div class="destination-image iceland-image">
+                                <span class="country-badge">Iceland</span>
+                                <span aria-hidden="true">🏔️</span>
+                            </div>
+
+                            <div class="card-body p-4">
+                                <h3 class="card-title h4">Reykjavik</h3>
+
+                                <p class="card-text">
+                                    Reykjavik is a gateway to waterfalls,
+                                    glaciers, volcanoes, hot springs, and the
+                                    northern lights.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card destination-card h-100 border-0">
+                            <div class="destination-image costa-rica-image">
+                                <span class="country-badge">Costa Rica</span>
+                                <span aria-hidden="true">🌴</span>
+                            </div>
+
+                            <div class="card-body p-4">
+                                <h3 class="card-title h4">La Fortuna</h3>
+
+                                <p class="card-text">
+                                    La Fortuna has tropical forests, wildlife,
+                                    hot springs, waterfalls, and views of Arenal
+                                    Volcano.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a
+                        class="btn custom-primary-button"
+                        href="destinations.html"
+                    >
+                        See Destination Details
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mock AI interaction -->
+        <section class="content-section">
+            <div class="container">
+                <div class="assistant-wrapper">
+                    <div class="row align-items-center g-5">
+                        <div class="col-lg-5">
+                            <span class="section-label">Mock AI Feature</span>
+                            <h2 class="mt-2">Travel Assistant AI</h2>
+
+                            <p>
+                                Type a destination or travel interest. The
+                                assistant will display a simulated answer. This
+                                section does not connect to a real API.
+                            </p>
+
+                            <div class="workflow">
+                                <span>User Input</span>
+                                <i class="bi bi-arrow-right"></i>
+                                <span>Frontend</span>
+                                <i class="bi bi-arrow-right"></i>
+                                <span>Mock Response</span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7">
+                            <div class="assistant-card">
+                                <div class="assistant-header">
+                                    <div class="assistant-status">
+                                        <span class="status-dot"></span>
+                                        Travel Assistant
+                                    </div>
+
+                                    <i class="bi bi-robot fs-4"></i>
+                                </div>
+
+                                <div
+                                    id="chatOutput"
+                                    class="chat-output"
+                                    aria-live="polite"
+                                >
+                                    <div class="message assistant-message">
+                                        Hello, Kal-EL! Tell me where you want to
+                                        travel or what type of trip you enjoy.
+                                    </div>
+                                </div>
+
+                                <form id="travelForm" class="mt-3">
+                                    <label
+                                        class="form-label"
+                                        for="travelInput"
+                                    >
+                                        Your travel question
+                                    </label>
+
+                                    <div class="input-group">
+                                        <input
+                                            id="travelInput"
+                                            class="form-control"
+                                            type="text"
+                                            placeholder="Example: I want an adventure trip"
+                                            autocomplete="off"
+                                            required
+                                        >
+
+                                        <button
+                                            class="btn assistant-button"
+                                            type="submit"
+                                        >
+                                            <i class="bi bi-send-fill me-2"></i>
+                                            Send
+                                        </button>
+                                    </div>
+                                </form>
+
+                                <button
+                                    id="clearChat"
+                                    class="btn btn-link clear-button mt-2 p-0"
+                                    type="button"
+                                >
+                                    Clear conversation
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p class="mb-1">
+                <strong>Kal-EL's Travel Adventures</strong>
+            </p>
+
+            <p class="mb-0">
+                Lab 1 - Built with HTML, CSS, Bootstrap, and mock JavaScript
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="[cdn.jsdelivr.net](https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js)"
+    ></script>
+
+    <!-- Mock Travel Assistant -->
+    <script>
+        const travelForm = document.getElementById("travelForm");
+        const travelInput = document.getElementById("travelInput");
+        const chatOutput = document.getElementById("chatOutput");
+        const clearChatButton = document.getElementById("clearChat");
+
+        function addMessage(message, sender) {
+            const messageElement = document.createElement("div");
+
+            messageElement.classList.add(
+                "message",
+                sender === "user"
+                    ? "user-message"
+                    : "assistant-message"
+            );
+
+            messageElement.textContent = message;
+            chatOutput.appendChild(messageElement);
+            chatOutput.scrollTop = chatOutput.scrollHeight;
+        }
+
+        function createMockResponse(userInput) {
+            const question = userInput.toLowerCase();
+
+            if (
+                question.includes("beach") ||
+                question.includes("ocean") ||
+                question.includes("relax")
+            ) {
+                return "Costa Rica could be a good choice. It offers beaches, warm weather, rainforests, and relaxing hot springs.";
+            }
+
+            if (
+                question.includes("food") ||
+                question.includes("culture") ||
+                question.includes("history")
+            ) {
+                return "Kyoto could match your interests. It has historic temples, traditional neighborhoods, markets, and Japanese cuisine.";
+            }
+
+            if (
+                question.includes("nature") ||
+                question.includes("hiking") ||
+                question.includes("adventure")
+            ) {
+                return "Iceland may be a great destination for you. It offers hiking, waterfalls, volcanoes, glaciers, and geothermal pools.";
+            }
+
+            if (
+                question.includes("budget") ||
+                question.includes("cheap") ||
+                question.includes("affordable")
+            ) {
+                return "To save money, travel during the off-season, use public transportation, compare flights, and choose affordable local accommodations.";
+            }
+
+            return "That sounds like an interesting trip. Think about your budget, travel dates, trip length, transportation, and the activities you want to try.";
+        }
+
+        function handleTravelRequest(event) {
+            event.preventDefault();
+
+            const userText = travelInput.value.trim();
+
+            if (userText === "") {
+                return;
+            }
+
+            addMessage(userText, "user");
+            travelInput.value = "";
+
+            const response = createMockResponse(userText);
+
+            window.setTimeout(function () {
+                addMessage(response, "assistant");
+            }, 400);
+        }
+
+        function clearConversation() {
+            chatOutput.innerHTML = "";
+
+            addMessage(
+                "Hello, Kal-EL! Tell me where you want to travel or what type of trip you enjoy.",
+                "assistant"
+            );
+
+            travelInput.focus();
+        }
+
+        travelForm.addEventListener("submit", handleTravelRequest);
+        clearChatButton.addEventListener("click", clearConversation);
+    </script>
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plan a Trip | Kal-EL's Travel Adventures</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="[cdn.jsdelivr.net](https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css)"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="[cdn.jsdelivr.net](https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css)"
+        rel="stylesheet"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-airplane-fill me-2"></i>
+                Kal-EL's Travel Adventures
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavigation"
+                aria-controls="mainNavigation"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavigation">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html">
+                            Destinations
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link active"
+                            aria-current="page"
+                            href="plan.html"
+                        >
+                            Plan a Trip
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Page heading -->
+        <header class="page-banner">
+            <div class="container text-center">
+                <span class="hero-label">
+                    <i class="bi bi-calendar-check me-2"></i>
+                    Build your travel plan
+                </span>
+
+                <h1 class="display-4 fw-bold mt-3">
+                    Plan a Trip
+                </h1>
+
+                <p class="lead mx-auto">
+                    Complete the form to create a simple travel-plan preview.
+                </p>
+            </div>
+        </header>
+
+        <!-- Travel form -->
+        <section class="content-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <div class="planning-card">
+                            <div class="row g-5">
+                                <div class="col-lg-7">
+                                    <span class="section-label">
+                                        Travel Information
+                                    </span>
+
+                                    <h2 class="mt-2 mb-4">
+                                        Tell Us About Your Trip
+                                    </h2>
+
+                                    <form id="tripForm">
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <label
+                                                    class="form-label"
+                                                    for="travelerName"
+                                                >
+                                                    Traveler's name
+                                                </label>
+
+                                                <input
+                                                    id="travelerName"
+                                                    class="form-control"
+                                                    type="text"
+                                                    value="Kal-EL Rohttis"
+                                                    required
+                                                >
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label
+                                                    class="form-label"
+                                                    for="startingLocation"
+                                                >
+                                                    Starting location
+                                                </label>
+
+                                                <input
+                                                    id="startingLocation"
+                                                    class="form-control"
+                                                    type="text"
+                                                    value="Queens, New York"
+                                                    required
+                                                >
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label
+                                                    class="form-label"
+                                                    for="destination"
+                                                >
+                                                    Destination
+                                                </label>
+
+                                                <select
+                                                    id="destination"
+                                                    class="form-select"
+                                                    required
+                                                >
+                                                    <option value="">
+                                                        Choose a destination
+                                                    </option>
+                                                    <option value="Kyoto, Japan">
+                                                        Kyoto, Japan
+                                                    </option>
+                                                    <option value="Reykjavik, Iceland">
+                                                        Reykjavik, Iceland
+                                                    </option>
+                                                    <option value="La Fortuna, Costa Rica">
+                                                        La Fortuna, Costa Rica
+                                                    </option>
+                                                    <option value="Another destination">
+                                                        Another destination
+                                                    </option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label
+                                                    class="form-label"
+                                                    for="tripLength"
+                                                >
+                                                    Trip length
+                                                </label>
+
+                                                <input
+                                                    id="tripLength"
+                                                    class="form-control"
+                                                    type="number"
+                                                    min="1"
+                                                    max="30"
+                                                    placeholder="Number of days"
+                                                    required
+                                                >
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label
+                                                    class="form-label"
+                                                    for="departureDate"
+                                                >
+                                                    Departure date
+                                                </label>
+
+                                                <input
+                                                    id="departureDate"
+                                                    class="form-control"
+                                                    type="date"
+                                                    required
+                                                >
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label
+                                                    class="form-label"
+                                                    for="budget"
+                                                >
+                                                    Budget
+                                                </label>
+
+                                                <select
+                                                    id="budget"
+                                                    class="form-select"
+                                                    required
+                                                >
+                                                    <option value="">
+                                                        Choose a budget
+                                                    </option>
+                                                    <option value="Budget-friendly">
+                                                        Budget-friendly
+                                                    </option>
+                                                    <option value="Moderate">
+                                                        Moderate
+                                                    </option>
+                                                    <option value="Luxury">
+                                                        Luxury
+                                                    </option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label
+                                                    class="form-label"
+                                                    for="activities"
+                                                >
+                                                    Preferred activities
+                                                </label>
+
+                                                <textarea
+                                                    id="activities"
+                                                    class="form-control"
+                                                    rows="4"
+                                                    placeholder="Example: hiking, photography, museums, and local food"
+                                                    required
+                                                ></textarea>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <button
+                                                    class="btn custom-primary-button w-100"
+                                                    type="submit"
+                                                >
+                                                    <i class="bi bi-stars me-2"></i>
+                                                    Create Travel Plan
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="col-lg-5">
+                                    <div class="plan-preview h-100">
+                                        <div class="feature-icon">
+                                            <i class="bi bi-clipboard-check"></i>
+                                        </div>
+
+                                        <h2 class="h3">
+                                            Plan Preview
+                                        </h2>
+
+                                        <p id="previewInstructions">
+                                            Complete the form to display your
+                                            travel information here.
+                                        </p>
+
+                                        <div
+                                            id="planResult"
+                                            class="d-none"
+                                            aria-live="polite"
+                                        >
+                                            <p>
+                                                <strong>Traveler:</strong>
+                                                <span id="resultName"></span>
+                                            </p>
+
+                                            <p>
+                                                <strong>Starting from:</strong>
+                                                <span id="resultLocation"></span>
+                                            </p>
+
+                                            <p>
+                                                <strong>Destination:</strong>
+                                                <span id="resultDestination"></span>
+                                            </p>
+
+                                            <p>
+                                                <strong>Departure:</strong>
+                                                <span id="resultDate"></span>
+                                            </p>
+
+                                            <p>
+                                                <strong>Length:</strong>
+                                                <span id="resultLength"></span>
+                                            </p>
+
+                                            <p>
+                                                <strong>Budget:</strong>
+                                                <span id="resultBudget"></span>
+                                            </p>
+
+                                            <p class="mb-0">
+                                                <strong>Activities:</strong>
+                                                <span id="resultActivities"></span>
+                                            </p>
+                                        </div>
+
+                                        <div
+                                            id="successMessage"
+                                            class="alert alert-success mt-4 d-none"
+                                            role="alert"
+                                        >
+                                            Your mock travel plan was created
+                                            successfully. No information was
+                                            sent to a server.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- API workflow explanation -->
+        <section class="content-section light-section">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <span class="section-label">Future AI Integration</span>
+                    <h2>How the Form Could Work Later</h2>
+
+                    <p>
+                        A future version could send this information to a
+                        backend and AI service using an API.
+                    </p>
+                </div>
+
+                <div class="workflow-large">
+                    <div class="workflow-step">
+                        <i class="bi bi-keyboard"></i>
+                        <h3 class="h5">User Input</h3>
+                    </div>
+
+                    <i class="bi bi-arrow-right workflow-arrow"></i>
+
+                    <div class="workflow-step">
+                        <i class="bi bi-window"></i>
+                        <h3 class="h5">Frontend</h3>
+                    </div>
+
+                    <i class="bi bi-arrow-right workflow-arrow"></i>
+
+                    <div class="workflow-step">
+                        <i class="bi bi-cloud-arrow-up"></i>
+                        <h3 class="h5">API Request</h3>
+                    </div>
+
+                    <i class="bi bi-arrow-right workflow-arrow"></i>
+
+                    <div class="workflow-step">
+                        <i class="bi bi-robot"></i>
+                        <h3 class="h5">AI Service</h3>
+                    </div>
+
+                    <i class="bi bi-arrow-right workflow-arrow"></i>
+
+                    <div class="workflow-step">
+                        <i class="bi bi-chat-square-text"></i>
+                        <h3 class="h5">Response</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p class="mb-1">
+                <strong>Kal-EL's Travel Adventures</strong>
+            </p>
+
+            <p class="mb-0">
+                Lab 1 - Travel Planning Page
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="[cdn.jsdelivr.net](https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js)"
+    ></script>
+
+    <!-- Mock form logic -->
+    <script>
+        const tripForm = document.getElementById("tripForm");
+        const previewInstructions = document.getElementById(
+            "previewInstructions"
+        );
+        const planResult = document.getElementById("planResult");
+        const successMessage = document.getElementById("successMessage");
+
+        function createTravelPlan(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("travelerName").value;
+            const location = document.getElementById(
+                "startingLocation"
+            ).value;
+            const destination = document.getElementById(
+                "destination"
+            ).value;
+            const departureDate = document.getElementById(
+                "departureDate"
+            ).value;
+            const tripLength = document.getElementById(
+                "tripLength"
+            ).value;
+            const budget = document.getElementById("budget").value;
+            const activities = document.getElementById(
+                "activities"
+            ).value;
+
+            const formattedDate = new Date(
+                departureDate + "T00:00:00"
+            ).toLocaleDateString();
+
+            document.getElementById("resultName").textContent = name;
+            document.getElementById("resultLocation").textContent = location;
+            document.getElementById("resultDestination").textContent =
+                destination;
+            document.getElementById("resultDate").textContent = formattedDate;
+            document.getElementById("resultLength").textContent =
+                tripLength + " day(s)";
+            document.getElementById("resultBudget").textContent = budget;
+            document.getElementById("resultActivities").textContent =
+                activities;
+
+            previewInstructions.classList.add("d-none");
+            planResult.classList.remove("d-none");
+            successMessage.classList.remove("d-none");
+        }
+
+        tripForm.addEventListener("submit", createTravelPlan);
+    </script>
+</body>
+</html>
