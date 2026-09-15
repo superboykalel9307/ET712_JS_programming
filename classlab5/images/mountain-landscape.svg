@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Mountain landscape</title>
+  <desc id="desc">Layered green mountains beneath a blue sky</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bde3ed"/>
+      <stop offset="1" stop-color="#f5dfb0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#sky)"/>
+  <circle cx="930" cy="150" r="86" fill="#fff1bf" opacity=".9"/>
+  <path d="M0 560 250 290l180 190 220-270 350 350 200-180v320H0Z" fill="#487b68"/>
+  <path d="m250 290 80 105-55-26-35 40-34-31Z" fill="#edf4e8"/>
+  <path d="m650 210 115 164-77-44-43 54-51-46Z" fill="#eaf2e6"/>
+  <path d="M0 590c190-65 315 35 500-18 205-59 302 43 700-47v175H0Z" fill="#214f48"/>
+  <path d="M0 650c210-70 370 23 580-25 185-43 382 22 620-45v120H0Z" fill="#163b39"/>
+</svg>

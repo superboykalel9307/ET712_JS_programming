@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Sunlit forest</title>
+  <desc id="desc">A peaceful green forest with sunlight filtering through the trees</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b7d9c0"/>
+      <stop offset=".45" stop-color="#6eaa79"/>
+      <stop offset="1" stop-color="#173f35"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".25" r=".5">
+      <stop offset="0" stop-color="#fff6c4" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#fff6c4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#sun)"/>
+  <path d="M200 900 370 0h82l65 900ZM740 900 790 0h105l150 900ZM1250 900 1200 0h90l270 900Z" fill="#193f35" opacity=".9"/>
+  <path d="M0 900c250-180 430-145 650-40 250 119 425-6 950-110v150H0Z" fill="#102f2d"/>
+  <path d="M0 670c350-95 550 30 800-10 290-47 510-25 800-105v350H0Z" fill="#1d5541" opacity=".85"/>
+  <g fill="#b6d67d" opacity=".7">
+    <circle cx="270" cy="180" r="70"/><circle cx="390" cy="125" r="90"/><circle cx="560" cy="180" r="60"/>
+    <circle cx="1070" cy="160" r="80"/><circle cx="1240" cy="120" r="100"/><circle cx="1430" cy="210" r="70"/>
+  </g>
+</svg>
