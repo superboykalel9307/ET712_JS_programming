@@ -69,3 +69,9 @@ function rollingdice(n){
         console.log(rolldice())
     }
 }
+
+console.log("n------ example 7: function with default values")
+// spread syntax ... is used to iterate elements from the list
+nums = [3, 9, -6, 10, 1, 0]
+let maxnum = Math.max(...nums)
+console.log(maxnum)
