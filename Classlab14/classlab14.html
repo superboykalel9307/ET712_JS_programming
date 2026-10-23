@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Lab 14 | Kal-el Rohttis</title>
+  <link rel="stylesheet" href="style14.css">
+  <script src="script14.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <p class="lab-number">CLASS LAB 14</p>
+    <h1 id="mainTitle">Document Object Model</h1>
+    <p class="student-name">Kal-el Rohttis</p>
+    <p id="mouseMessage">Move your mouse away from the heading.</p>
+  </header>
+
+  <main>
+    <section class="lab-section" id="section-one">
+      <p class="section-label">SECTION 14.1</p>
+      <h2>Accessing and Changing Elements</h2>
+      <p class="intro">
+        Use the buttons to practice selecting elements and changing their
+        text, style, and classes with JavaScript.
+      </p>
+
+      <div class="demo-card">
+        <p id="demoText">This paragraph can be changed with the buttons.</p>
+        <div class="button-row">
+          <button id="changeTextButton" type="button">Change Text</button>
+          <button id="styleButton" type="button">Change Style</button>
+          <button id="classButton" type="button">Toggle Highlight</button>
+        </div>
+      </div>
+
+      <div class="demo-card">
+        <h3>Shape changer</h3>
+        <div id="shape" class="shape">
+          <span id="shapeLabel">Choose a shape</span>
+        </div>
+        <div class="button-row">
+          <button type="button" data-shape="square">Square</button>
+          <button type="button" data-shape="rectangle">Rectangle</button>
+          <button type="button" data-shape="circle">Circle</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="lab-section" id="section-two">
+      <p class="section-label">SECTION 14.2</p>
+      <h2>Lists, Events, and DOM Navigation</h2>
+      <p class="intro">
+        Click a list item to remove it. Add a new item with the form.
+        The list uses one event listener on its parent.
+      </p>
+
+      <div class="demo-card">
+        <h3>My DOM practice list</h3>
+        <ul id="practiceList">
+          <li>Practice querySelector</li>
+          <li>Use addEventListener</li>
+          <li>Explore parent and child elements</li>
+        </ul>
+
+        <form id="itemForm">
+          <label for="itemInput">Add a list item:</label>
+          <div class="button-row">
+            <input id="itemInput" type="text" placeholder="Type an item">
+            <button type="submit">Add Item</button>
+          </div>
+        </form>
+        <p id="listMessage" class="message" aria-live="polite">
+          Tip: click a list item to remove it.
+        </p>
+      </div>
+
+      <div class="demo-card">
+        <h3>Event object and keyboard practice</h3>
+        <button id="pressButton" class="press-button" type="button">
+          PRESS ME
+        </button>
+        <label for="keyboardInput">Type in this field:</label>
+        <input id="keyboardInput" type="text" placeholder="Try a key">
+        <p id="keyMessage" class="message" aria-live="polite">
+          Your key and event information will appear here.
+        </p>
+      </div>
+    </section>
+
+    <section class="lab-section" id="section-three">
+      <p class="section-label">SECTION 14.3</p>
+      <h2>Forms and Window Events</h2>
+      <p class="intro">
+        Submit the form to display a greeting. Resize the browser to see
+        its dimensions, or use the button to scroll back to the top.
+      </p>
+
+      <div class="demo-card">
+        <h3>Greeting form</h3>
+        <form id="greetingForm">
+          <label for="nameInput">Your name:</label>
+          <input id="nameInput" type="text" placeholder="Enter your name">
+          <button type="submit">Show Greeting</button>
+        </form>
+        <p id="greetingMessage" class="message" aria-live="polite"></p>
+      </div>
+
+      <div class="demo-card">
+        <h3>Browser information</h3>
+        <p id="windowInfo" class="message">Window size will appear here.</p>
+        <p id="scrollInfo" class="message">Scroll position will appear here.</p>
+        <button id="topButton" type="button">Scroll to Top</button>
+      </div>
+
+      <div class="demo-card">
+        <h3>Create and remove elements</h3>
+        <p id="createdItems">
+          Use the buttons to add or remove a practice note.
+        </p>
+        <div class="button-row">
+          <button id="addNoteButton" type="button">Create Note</button>
+          <button id="removeNoteButton" type="button">Remove Last Note</button>
+        </div>
+        <div id="notesContainer"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Class Lab 14 &bull; Kal-el Rohttis</p>
+  </footer>
+</body>
+</html>
