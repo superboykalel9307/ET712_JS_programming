@@ -1,0 +1,21 @@
+.circle{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(223, 13, 13);
+}
+    .counter{
+        font-size: 1.5rem;
+        color: red;
+    }
+
+    .btnchangecolor{
+        padding: 0.5rem 2rem;
+        background-color: lightgray;
+        border-radius: 1rem;
+        border: none;
+    }
+.btnchangecolor:hover{
+    box-shadow: 0px 0px 3px 2px gray;
+    cursor: pointer;
+}
