@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework 4</title>
+  <link rel="stylesheet" href="rohttis.css">
+</head>
+<body>
+  <header>
+    <h1 id="pageTitle">Homework 4</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Sign-Up Form</h2>
+
+      <form id="userForm" novalidate>
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" aria-describedby="nameError">
+          <span id="nameError" class="error" aria-live="polite"></span>
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" aria-describedby="emailError">
+          <span id="emailError" class="error" aria-live="polite"></span>
+        </div>
+
+        <div>
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" aria-describedby="passwordError">
+          <span id="passwordError" class="error" aria-live="polite"></span>
+        </div>
+
+        <button type="submit">Submit</button>
+        <p id="formMessage" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section>
+      <h2>Travel Gallery</h2>
+
+      <div class="gallery">
+        <button id="prevButton" type="button">Previous</button>
+
+        <div class="galleryViewport">
+          <div class="galleryTrack" id="galleryTrack">
+            <article class="card">
+              <img src="mountains.jpg" alt="Mountain landscape">
+              <h3>Mountains</h3>
+            </article>
+            <article class="card">
+              <img src="ocean.jpg" alt="Ocean view">
+              <h3>Ocean</h3>
+            </article>
+            <article class="card">
+              <img src="forest.jpg" alt="Forest landscape">
+              <h3>Forest</h3>
+            </article>
+            <article class="card">
+              <img src="desert.jpg" alt="Desert landscape">
+              <h3>Desert</h3>
+            </article>
+            <article class="card">
+              <img src="city.jpg" alt="City skyline">
+              <h3>City</h3>
+            </article>
+            <article class="card">
+              <img src="waterfall.jpg" alt="Waterfall">
+              <h3>Waterfall</h3>
+            </article>
+          </div>
+        </div>
+
+        <button id="nextButton" type="button">Next</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="rohttis.js"></script>
+</body>
+</html>
