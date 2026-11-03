@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A playful Pre-K learning website with colors, counting, shapes, animals, a quiz and a puzzle.">
+  <title>Pre-K Learning Adventure</title>
+  <!-- All styles, including responsive breakpoints, are in one file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- HEADER + NAVIGATION -->
+  <header class="site-header" id="top">
+    <p class="tagline">A playful place to learn</p>
+    <h1>Pre-K Learning Adventure</h1>
+    <p class="subtitle">Explore, practice, and have fun!</p>
+
+    <nav class="main-nav" aria-label="Learning sections">
+      <ul>
+        <li><a href="#colors">Colors</a></li>
+        <li><a href="#math">Math</a></li>
+        <li><a href="#shapes">Shapes</a></li>
+        <li><a href="#animals">Animals</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#puzzle">Puzzle</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="container">
+
+    <!-- READY, SET, LEARN banner (updates when a card is clicked) -->
+    <section class="banner" aria-live="polite" aria-label="Current lesson">
+      <div class="banner-text">
+        <p class="eyebrow">Ready, set, learn!</p>
+        <p class="banner-message" id="bannerText">Click a learning card to get started!</p>
+      </div>
+      <div class="banner-buttons">
+        <button type="button" class="btn btn-back" id="backBtn">&larr; Back</button>
+        <button type="button" class="btn btn-next" id="nextBtn">Next &rarr;</button>
+        <button type="button" class="btn btn-sound" id="soundBtn" aria-pressed="true">&#128266; Sound on</button>
+      </div>
+    </section>
+
+    <!-- SKILL 1: COLORS -->
+    <section class="card" id="colors">
+      <p class="eyebrow">Skill 1</p>
+      <h2>Color Garden</h2>
+      <p class="hint">Tap a color to learn its name.</p>
+      <div class="grid" id="colorsGrid"></div>
+    </section>
+
+    <!-- SKILL 2: MATH (counting 1 to 10) -->
+    <section class="card" id="math">
+      <p class="eyebrow">Skill 2</p>
+      <h2>Counting Park</h2>
+      <p class="hint">Tap a number to count along.</p>
+      <div class="grid" id="mathGrid"></div>
+    </section>
+
+    <!-- SKILL 3: SHAPES -->
+    <section class="card" id="shapes">
+      <p class="eyebrow">Skill 3</p>
+      <h2>Shape Town</h2>
+      <p class="hint">Tap a shape to hear its name.</p>
+      <div class="grid" id="shapesGrid"></div>
+    </section>
+
+    <!-- SKILL 4: ANIMALS -->
+    <section class="card" id="animals">
+      <p class="eyebrow">Skill 4</p>
+      <h2>Animal Farm</h2>
+      <p class="hint">Tap an animal to hear its name and sound.</p>
+      <div class="grid" id="animalsGrid"></div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="card" id="quiz">
+      <p class="eyebrow">Quiz time</p>
+      <h2>Show What You Know</h2>
+      <p class="hint">Answer 5 questions. Press the speaker to hear each one.</p>
+
+      <div class="quiz-start" id="quizStart">
+        <button type="button" class="btn btn-next btn-big" id="quizStartBtn">Start the quiz</button>
+      </div>
+
+      <div class="quiz-play" id="quizPlay" hidden>
+        <div class="quiz-top">
+          <span id="quizProgress">Question 1 of 5</span>
+          <span id="quizScore" aria-label="Score">&#11088; 0</span>
+        </div>
+        <div class="quiz-question">
+          <p id="quizPrompt">Question</p>
+          <button type="button" class="btn btn-back" id="quizHear" aria-label="Hear the question">&#128266; Hear it</button>
+        </div>
+        <div class="quiz-options" id="quizOptions"></div>
+        <p class="quiz-feedback" id="quizFeedback" aria-live="assertive"></p>
+      </div>
+    </section>
+
+    <!-- PUZZLE (memory match) -->
+    <section class="card" id="puzzle">
+      <p class="eyebrow">Puzzle</p>
+      <h2>Animal Match</h2>
+      <p class="hint">Flip two cards. Find the animals that match!</p>
+      <div class="puzzle-top">
+        <span id="puzzleMoves">Moves: 0</span>
+        <span id="puzzleMatches">Matches: 0 / 6</span>
+        <button type="button" class="btn btn-back" id="puzzleReset">New game</button>
+      </div>
+      <div class="puzzle-grid" id="puzzleGrid"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with love for little learners. Keep exploring!</p>
+  </footer>
+
+  <!-- GO TO TOP BUTTON -->
+  <button type="button" class="top-btn" id="topBtn" aria-label="Go to top" hidden>&#8679;</button>
+
+  <!-- MODAL WINDOW -->
+  <div class="modal-overlay" id="modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <p class="modal-emoji" id="modalEmoji">&#127881;</p>
+      <h2 id="modalTitle">Great job!</h2>
+      <p id="modalMessage">You did it!</p>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-next" id="modalAgain">Play again</button>
+        <button type="button" class="btn btn-back" id="modalClose">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

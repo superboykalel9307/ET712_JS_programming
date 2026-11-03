@@ -3,27 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Class Lab 14 | Kal-el Rohttis</title>
-  <link rel="stylesheet" href="style14.css">
-  <script src="script14.js" defer></script>
+  <title>Pre-K Project | Kal-el Rohttis</title>
+  <link rel="stylesheet" href="Rohttis.css">
+  <script src="Rohttis.js" defer></script>
 </head>
 <body>
   <header class="hero">
-    <p class="lab-number">CLASS LAB 14</p>
-    <h1 id="mainTitle">Document Object Model</h1>
+    <p class="lab-number">PRE-K PROJECT</p>
+    <h1 id="mainTitle">My Fun Learning Site</h1>
     <p class="student-name">Kal-el Rohttis</p>
     <p id="mouseMessage">Move your mouse away from the heading.</p>
   </header>
 
   <main>
     <section class="lab-section" id="section-one">
-      <p class="section-label">SECTION 14.1</p>
-      <h2>Accessing and Changing Elements</h2>
-      <p class="intro">
-        Use the buttons to practice selecting elements and changing their
-        text, style, and classes with JavaScript.
-      </p>
-
+      <p class="section-label">SKILL 1: ANIMALS</p>
+      <h2>Learn 10 Animals</h2>
+      <p class="intro">Use the buttons to practice selecting elements and changing their text, style, and classes.</p>
       <div class="demo-card">
         <p id="demoText">This paragraph can be changed with the buttons.</p>
         <div class="button-row">
@@ -32,91 +28,109 @@
           <button id="classButton" type="button">Toggle Highlight</button>
         </div>
       </div>
-
       <div class="demo-card">
-        <h3>Shape changer</h3>
-        <div id="shape" class="shape">
-          <span id="shapeLabel">Choose a shape</span>
-        </div>
+        <h3>10 Animals - click to learn</h3>
         <div class="button-row">
-          <button type="button" data-shape="square">Square</button>
-          <button type="button" data-shape="rectangle">Rectangle</button>
-          <button type="button" data-shape="circle">Circle</button>
+          <button type="button" data-animal="Dog">Dog 🐶</button>
+          <button type="button" data-animal="Cat">Cat 🐱</button>
+          <button type="button" data-animal="Lion">Lion 🦁</button>
+          <button type="button" data-animal="Elephant">Elephant 🐘</button>
+          <button type="button" data-animal="Monkey">Monkey 🐵</button>
+          <button type="button" data-animal="Frog">Frog 🐸</button>
+          <button type="button" data-animal="Fish">Fish 🐟</button>
+          <button type="button" data-animal="Bird">Bird 🐦</button>
+          <button type="button" data-animal="Bee">Bee 🐝</button>
+          <button type="button" data-animal="Horse">Horse 🐴</button>
         </div>
+        <p id="animalMessage" class="message" aria-live="polite">Your animal will appear here.</p>
       </div>
     </section>
 
     <section class="lab-section" id="section-two">
-      <p class="section-label">SECTION 14.2</p>
-      <h2>Lists, Events, and DOM Navigation</h2>
-      <p class="intro">
-        Click a list item to remove it. Add a new item with the form.
-        The list uses one event listener on its parent.
-      </p>
-
+      <p class="section-label">SKILL 2: FRUITS + SKILL 3: COLORS</p>
+      <h2>Learn Fruits and Colors</h2>
+      <p class="intro">Click a fruit to remove it. Add a new fruit with the form. Click a color to change the shape.</p>
       <div class="demo-card">
-        <h3>My DOM practice list</h3>
+        <h3>My 10 fruits list</h3>
         <ul id="practiceList">
-          <li>Practice querySelector</li>
-          <li>Use addEventListener</li>
-          <li>Explore parent and child elements</li>
+          <li>Apple 🍎</li>
+          <li>Banana 🍌</li>
+          <li>Orange 🍊</li>
+          <li>Grapes 🍇</li>
+          <li>Strawberry 🍓</li>
+          <li>Watermelon 🍉</li>
+          <li>Pineapple 🍍</li>
+          <li>Mango 🥭</li>
+          <li>Cherry 🍒</li>
+          <li>Lemon 🍋</li>
         </ul>
-
         <form id="itemForm">
           <label for="itemInput">Add a list item:</label>
           <div class="button-row">
-            <input id="itemInput" type="text" placeholder="Type an item">
+            <input id="itemInput" type="text" placeholder="Type a fruit">
             <button type="submit">Add Item</button>
           </div>
         </form>
-        <p id="listMessage" class="message" aria-live="polite">
-          Tip: click a list item to remove it.
-        </p>
+        <p id="listMessage" class="message" aria-live="polite">Tip: click a fruit to remove it.</p>
       </div>
-
       <div class="demo-card">
-        <h3>Event object and keyboard practice</h3>
-        <button id="pressButton" class="press-button" type="button">
-          PRESS ME
-        </button>
-        <label for="keyboardInput">Type in this field:</label>
-        <input id="keyboardInput" type="text" placeholder="Try a key">
-        <p id="keyMessage" class="message" aria-live="polite">
-          Your key and event information will appear here.
-        </p>
+        <h3>10 Colors - shape changer</h3>
+        <div id="shape" class="shape"><span id="shapeLabel">Choose a color</span></div>
+        <div class="button-row">
+          <button type="button" data-shape="square" data-color="Red">Red</button>
+          <button type="button" data-shape="circle" data-color="Blue">Blue</button>
+          <button type="button" data-shape="square" data-color="Yellow">Yellow</button>
+          <button type="button" data-shape="rectangle" data-color="Green">Green</button>
+          <button type="button" data-shape="circle" data-color="Orange">Orange</button>
+          <button type="button" data-shape="square" data-color="Purple">Purple</button>
+          <button type="button" data-shape="circle" data-color="Pink">Pink</button>
+          <button type="button" data-shape="rectangle" data-color="Brown">Brown</button>
+          <button type="button" data-shape="square" data-color="Black">Black</button>
+          <button type="button" data-shape="circle" data-color="White">White</button>
+        </div>
       </div>
     </section>
 
     <section class="lab-section" id="section-three">
-      <p class="section-label">SECTION 14.3</p>
-      <h2>Forms and Window Events</h2>
-      <p class="intro">
-        Submit the form to display a greeting. Resize the browser to see
-        its dimensions, or use the button to scroll back to the top.
-      </p>
-
+      <p class="section-label">SKILL 4: NUMBERS + QUIZ</p>
+      <h2>Learn Numbers 1 to 10</h2>
+      <p class="intro">Click a number. Type in the field and submit the quiz form.</p>
       <div class="demo-card">
-        <h3>Greeting form</h3>
+        <h3>10 Numbers</h3>
+        <div class="button-row">
+          <button type="button" data-number="1">1</button>
+          <button type="button" data-number="2">2</button>
+          <button type="button" data-number="3">3</button>
+          <button type="button" data-number="4">4</button>
+          <button type="button" data-number="5">5</button>
+          <button type="button" data-number="6">6</button>
+          <button type="button" data-number="7">7</button>
+          <button type="button" data-number="8">8</button>
+          <button type="button" data-number="9">9</button>
+          <button type="button" data-number="10">10</button>
+        </div>
+        <button id="pressButton" class="press-button" type="button">PRESS ME</button>
+        <label for="keyboardInput">Type in this field:</label>
+        <input id="keyboardInput" type="text" placeholder="Try a number">
+        <p id="keyMessage" class="message" aria-live="polite">Your number will appear here.</p>
+      </div>
+      <div class="demo-card">
+        <h3>Easy quiz</h3>
         <form id="greetingForm">
-          <label for="nameInput">Your name:</label>
-          <input id="nameInput" type="text" placeholder="Enter your name">
-          <button type="submit">Show Greeting</button>
+          <label for="nameInput">What animal says Meow?</label>
+          <input id="nameInput" type="text" placeholder="Type Cat, Dog, or Fish">
+          <button type="submit">Check Answer</button>
         </form>
         <p id="greetingMessage" class="message" aria-live="polite"></p>
       </div>
-
       <div class="demo-card">
         <h3>Browser information</h3>
         <p id="windowInfo" class="message">Window size will appear here.</p>
         <p id="scrollInfo" class="message">Scroll position will appear here.</p>
         <button id="topButton" type="button">Scroll to Top</button>
       </div>
-
       <div class="demo-card">
-        <h3>Create and remove elements</h3>
-        <p id="createdItems">
-          Use the buttons to add or remove a practice note.
-        </p>
+        <h3>Create and remove stars</h3>
         <div class="button-row">
           <button id="addNoteButton" type="button">Create Note</button>
           <button id="removeNoteButton" type="button">Remove Last Note</button>
@@ -125,9 +139,6 @@
       </div>
     </section>
   </main>
-
-  <footer>
-    <p>Class Lab 14 &bull; Kal-el Rohttis</p>
-  </footer>
+  <footer><p>Pre-K Project &bull; Kal-el Rohttis</p></footer>
 </body>
 </html>
